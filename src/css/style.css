@@ -8,6 +8,7 @@ body {
   background-color: #f3eacd;
   color: #212121;
   line-height: 1.5;
+  padding-bottom: 15px;
 }
 
 img {
@@ -52,4 +53,10 @@ input[type='text'] {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(56, 56, 243);
+  color: aliceblue;
+  font-size: 18px;
+  cursor: pointer;
 }
