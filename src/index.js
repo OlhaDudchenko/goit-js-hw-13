@@ -36,11 +36,15 @@ function onSearch(e) {
         const { data: { hits }, data: { totalHits } } = data;
          
         renderImagesMarkup(hits);
-        lightbox.refresh()
-        Notify.info(`Hooray! We found ${totalHits} images.`);
+        lightbox.refresh();
+        
         if (hits.length === 0) {
             Notify.failure("Sorry, there are no images matching your search query. Please try again.");
+            hideBtnLoadMore();
+            return;
        }
+       Notify.info(`Hooray! We found ${totalHits} images.`);
+        
      }
      catch (error) {
         console.log("Error: ", error)
@@ -48,7 +52,7 @@ function onSearch(e) {
 };
    
 async function onLoadMore() {
-    buttonLoadMore.disable=true;
+    
      try {
         const data = await newsApiService.fetchImages();
         const { data: { hits }, data: {totalHits }} = data;

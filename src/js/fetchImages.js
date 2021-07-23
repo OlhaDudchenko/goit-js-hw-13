@@ -10,7 +10,7 @@ export default class NewsApiService {
   constructor() {
     this.searchQuery = '';
     this.page = 1;
-      this.limit = 40;
+    this.limit = 40;
       
     }
 
