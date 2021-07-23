@@ -23,10 +23,11 @@ function onSearch(e) {
     return ;
   }
 
-    showBtnLoadMore()
+    
     newsApiService.resetPage();
     clearImagesContainer();
     fetchImages();
+    showBtnLoadMore();
     lightbox.refresh();
 }
 
@@ -84,6 +85,7 @@ function showBtnLoadMore() {
     buttonLoadMore.classList.remove("load-more");
     buttonLoadMore.classList.add("is-visible"); 
 };
+
 
 function hideBtnLoadMore() {
     buttonLoadMore.classList.remove("is-visible");
